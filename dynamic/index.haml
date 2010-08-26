@@ -3,7 +3,7 @@
 %button#play PLAY
 %button#clear CLEAR
 %span#bpm
-  BPM: 
+  BPM:
   %input{:type => 'text', :value => '140'}
 
 #board
@@ -12,47 +12,39 @@
     %ul
       %li{:id => "bass-pad-#{count}", :class => 'bass'}
         Bass
-        
+
       %li{:id => "snare-pad-#{count}", :class => 'snare'}
         Snare
-        
+
       %li{:id => "closed-hihat-pad-#{count}", :class => 'closed-hihat'}
         Closed
         %br
         Hi Hat
-        
+
       %li{:id => "open-hihat-pad-#{count}", :class => 'open-hihat'}
         Open
         %br
         Hi Hat
-        
+
       %li{:id => "crash-pad-#{count}", :class => 'crash'}
         Crash
-        
+
       %li{:id => "tom-pad-#{count}", :class => 'tom'}
         Tom
 
       %li{:id => "clap-pad-#{count}", :class => 'clap'}
         Clap
-        
+
       %li{:id => "doh-pad-#{count}", :class => 'cowbell'}
         Cowbell
     - count += 1
-    
+
 #sounds
   %audio{:class => 'bass', :src => '808/bass.wav'}
   %audio{:class => 'snare', :src => '808/snare.wav'}
   %audio{:class => 'closed-hihat', :src => '808/closed-hihat.wav'}
   %audio{:class => 'open-hihat', :src => '808/open-hihat.wav'}
   %audio{:class => 'crash', :src => '808/crash.wav'}
-  %audio{:class => 'tom', :src => 'doh.wav'}
+  %audio{:class => 'tom', :src => '808/tom.wav'}
   %audio{:class => 'clap', :src => '808/clap.wav'}
   %audio{:class => 'cowbell', :src => '808/cowbell.wav'}
-  
-  
-  
-  
-  
-  
-  
-    

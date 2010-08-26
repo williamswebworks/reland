@@ -2,19 +2,17 @@
 %html
   %head
     %title Reland
-    %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/site.css'}
-    %script{:type=>'text/javascript', :src=>'http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js'}
-    %script{:type=>'text/javascript', :src=>'/js/site.js'}
+    %link{:rel => 'stylesheet', :type => 'text/css', :href => '/css/site.css'}
+    %script{:type => 'text/javascript', :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js'}
+    %script{:type => 'text/javascript', :src => '/js/site.js'}
   %body
     #wrapper
       = yield
-    / =refresh
-    
-    %script{:type=>'text/javascript'}
+
+    %script{:type => 'text/javascript', :src => 'http://api.relay.io/client/24820E7E-9793-476A-9E58-5145E0DC0DEC.js'}
+    %script{:type => 'text/javascript'}
       :plain
-        try {
-          var relayio2BCFEA34959A49CF92C43ED07791665B = function(item){
-            console.log(typeof(item));
+        var relay = new RelayClient("24820E7E-9793-476A-9E58-5145E0DC0DEC");
+        relay.getUpdates(function(item) {
             selectPad(item);
-        };} catch(err) {}
-    %script{:type => 'text/javascript', :src => 'http://dev.relay.io/client/2BCFEA34-959A-49CF-92C4-3ED07791665B.js'}
+        });
