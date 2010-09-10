@@ -1,9 +1,9 @@
-%canvas#visualization{:width => 960, :height => 400}
+%canvas#visualization{:width => 960, :height => 150}
 
 %button#play PLAY
 %button#clear CLEAR
 %span#bpm
-  BPM:
+  BPMish:
   %input{:type => 'text', :value => '140'}
 
 #board
@@ -40,11 +40,11 @@
     - count += 1
 
 #sounds
-  %audio{:class => 'bass', :src => '808/bass.wav'}
-  %audio{:class => 'snare', :src => '808/snare.wav'}
-  %audio{:class => 'closed-hihat', :src => '808/closed-hihat.wav'}
-  %audio{:class => 'open-hihat', :src => '808/open-hihat.wav'}
-  %audio{:class => 'crash', :src => '808/crash.wav'}
-  %audio{:class => 'tom', :src => '808/tom.wav'}
-  %audio{:class => 'clap', :src => '808/clap.wav'}
-  %audio{:class => 'cowbell', :src => '808/cowbell.wav'}
+  %audio{:class => 'bass', :src => '808/bass.wav', :preload => 'true'}
+  %audio{:class => 'snare', :src => '808/snare.wav', :preload => 'true'}
+  %audio{:class => 'closed-hihat', :src => '808/closed-hihat.wav', :preload => 'true'}
+  %audio{:class => 'open-hihat', :src => '808/open-hihat.wav', :preload => 'true'}
+  %audio{:class => 'crash', :src => '808/crash.wav', :preload => 'true'}
+  %audio{:class => 'tom', :src => '808/tom.wav', :preload => 'true'}
+  %audio{:class => 'clap', :src => '808/clap.wav', :preload => 'true'}
+  %audio{:class => 'cowbell', :src => '808/cowbell.wav', :preload => 'true'}
