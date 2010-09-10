@@ -17,7 +17,6 @@
     $('#board ul:eq(' + count +')')
       .find('li.selected').each(function () {
         var audio = $('#sounds .' + this.className.replace(/\s+.*$/, ''))[0];
-        // chrome is lame!, toss off
         audio.currentTime = 0;
         audio.play();
         drawCircle();
