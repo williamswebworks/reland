@@ -8,11 +8,11 @@
   </head>
   <body>
     <div id='wrapper'>
-      <canvas height='400' id='visualization' width='960'></canvas>
+      <canvas height='150' id='visualization' width='960'></canvas>
       <button id='play'>PLAY</button>
       <button id='clear'>CLEAR</button>
       <span id='bpm'>
-        BPM:
+        BPMish:
         <input type='text' value='140' />
       </span>
       <div id='board'>
@@ -498,14 +498,14 @@
         </ul>
       </div>
       <div id='sounds'>
-        <audio class='bass' src='/reland/808/bass.wav'></audio>
-        <audio class='snare' src='/reland/808/snare.wav'></audio>
-        <audio class='closed-hihat' src='/reland/808/closed-hihat.wav'></audio>
-        <audio class='open-hihat' src='/reland/808/open-hihat.wav'></audio>
-        <audio class='crash' src='/reland/808/crash.wav'></audio>
-        <audio class='tom' src='/reland/808/tom.wav'></audio>
-        <audio class='clap' src='/reland/808/clap.wav'></audio>
-        <audio class='cowbell' src='/reland/808/cowbell.wav'></audio>
+        <audio class='bass' preload='true' src='/reland/808/bass.wav'></audio>
+        <audio class='snare' preload='true' src='/reland/808/snare.wav'></audio>
+        <audio class='closed-hihat' preload='true' src='/reland/808/closed-hihat.wav'></audio>
+        <audio class='open-hihat' preload='true' src='/reland/808/open-hihat.wav'></audio>
+        <audio class='crash' preload='true' src='/reland/808/crash.wav'></audio>
+        <audio class='tom' preload='true' src='/reland/808/tom.wav'></audio>
+        <audio class='clap' preload='true' src='/reland/808/clap.wav'></audio>
+        <audio class='cowbell' preload='true' src='/reland/808/cowbell.wav'></audio>
       </div>
     </div>
     <script src='http://api.relay.io/client/24820E7E-9793-476A-9E58-5145E0DC0DEC.js' type='text/javascript'></script>
