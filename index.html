@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Reland</title>
+    <link href='css/site.css' rel='stylesheet' type='text/css' />
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js' type='text/javascript'></script>
+    <script src='js/site.js' type='text/javascript'></script>
+  </head>
+  <body>
+    <div id='wrapper'>
+      <canvas height='150' id='visualization' width='960'></canvas>
+      <button id='play'>PLAY</button>
+      <button id='clear'>CLEAR</button>
+      <span id='bpm'>
+        BPMish:
+        <input type='text' value='140' />
+      </span>
+      <div id='board'>
+        <ul>
+          <li class='bass' id='bass-pad-1'>
+            Bass
+          </li>
+          <li class='snare' id='snare-pad-1'>
+            Snare
+          </li>
+          <li class='closed-hihat' id='closed-hihat-pad-1'>
+            Closed
+            <br />
+            Hi Hat
+          </li>
+          <li class='open-hihat' id='open-hihat-pad-1'>
+            Open
+            <br />
+            Hi Hat
+          </li>
+          <li class='crash' id='crash-pad-1'>
+            Crash
+          </li>
+          <li class='tom' id='tom-pad-1'>
+            Tom
+          </li>
+          <li class='clap' id='clap-pad-1'>
+            Clap
+          </li>
+          <li class='cowbell' id='cowbell-pad-1'>
+            Cowbell
+          </li>
+        </ul>
+        <ul>
+          <li class='bass' id='bass-pad-2'>
+            Bass
+          </li>
+          <li class='snare' id='snare-pad-2'>
+            Snare
+          </li>
+          <li class='closed-hihat' id='closed-hihat-pad-2'>
+            Closed
+            <br />
+            Hi Hat
+          </li>
+          <li class='open-hihat' id='open-hihat-pad-2'>
+            Open
+            <br />
+            Hi Hat
+          </li>
+          <li class='crash' id='crash-pad-2'>
+            Crash
+          </li>
+          <li class='tom' id='tom-pad-2'>
+            Tom
+          </li>
+          <li class='clap' id='clap-pad-2'>
+            Clap
+          </li>
+          <li class='cowbell' id='cowbell-pad-2'>
+            Cowbell
+          </li>
+        </ul>
+        <ul>
+          <li class='bass' id='bass-pad-3'>
+            Bass
+          </li>
+          <li class='snare' id='snare-pad-3'>
+            Snare
+          </li>
+          <li class='closed-hihat' id='closed-hihat-pad-3'>
+            Closed
+            <br />
+            Hi Hat
+          </li>
+          <li class='open-hihat' id='open-hihat-pad-3'>
+            Open
+            <br />
+            Hi Hat
+          </li>
+          <li class='crash' id='crash-pad-3'>
+            Crash
+          </li>
+          <li class='tom' id='tom-pad-3'>
+            Tom
+          </li>
+          <li class='clap' id='clap-pad-3'>
+            Clap
+          </li>
+          <li class='cowbell' id='cowbell-pad-3'>
+            Cowbell
+          </li>
+        </ul>
+        <ul>
+          <li class='bass' id='bass-pad-4'>
+            Bass
+          </li>
+          <li class='snare' id='snare-pad-4'>
+            Snare
+          </li>
+          <li class='closed-hihat' id='closed-hihat-pad-4'>
+            Closed
+            <br />
+            Hi Hat
+          </li>
+          <li class='open-hihat' id='open-hihat-pad-4'>
+            Open
+            <br />
+            Hi Hat
+          </li>
+          <li class='crash' id='crash-pad-4'>
+            Crash
+          </li>
+          <li class='tom' id='tom-pad-4'>
+            Tom
+          </li>
+          <li class='clap' id='clap-pad-4'>
+            Clap
+          </li>
+          <li class='cowbell' id='cowbell-pad-4'>
+            Cowbell
+          </li>
+        </ul>
+        <ul>
+          <li class='bass' id='bass-pad-5'>
+            Bass
+          </li>
+          <li class='snare' id='snare-pad-5'>
+            Snare
+          </li>
+          <li class='closed-hihat' id='closed-hihat-pad-5'>
+            Closed
+            <br />
+            Hi Hat
+          </li>
+          <li class='open-hihat' id='open-hihat-pad-5'>
+            Open
+            <br />
+            Hi Hat
+          </li>
+          <li class='crash' id='crash-pad-5'>
+            Crash
+          </li>
+          <li class='tom' id='tom-pad-5'>
+            Tom
+          </li>
+          <li class='clap' id='clap-pad-5'>
+            Clap
+          </li>
+          <li class='cowbell' id='cowbell-pad-5'>
+            Cowbell
+          </li>
+        </ul>
+        <ul>
+          <li class='bass' id='bass-pad-6'>
+            Bass
+          </li>
+          <li class='snare' id='snare-pad-6'>
+            Snare
+          </li>
+          <li class='closed-hihat' id='closed-hihat-pad-6'>
+            Closed
+            <br />
+            Hi Hat
+          </li>
+          <li class='open-hihat' id='open-hihat-pad-6'>
+            Open
+            <br />
+            Hi Hat
+          </li>
+          <li class='crash' id='crash-pad-6'>
+            Crash
+          </li>
+          <li class='tom' id='tom-pad-6'>
+            Tom
+          </li>
+          <li class='clap' id='clap-pad-6'>
+            Clap
+          </li>
+          <li class='cowbell' id='cowbell-pad-6'>
+            Cowbell
+          </li>
+        </ul>
+        <ul>
+          <li class='bass' id='bass-pad-7'>
+            Bass
+          </li>
+          <li class='snare' id='snare-pad-7'>
+            Snare
+          </li>
+          <li class='closed-hihat' id='closed-hihat-pad-7'>
+            Closed
+            <br />
+            Hi Hat
+          </li>
+          <li class='open-hihat' id='open-hihat-pad-7'>
+            Open
+            <br />
+            Hi Hat
+          </li>
+          <li class='crash' id='crash-pad-7'>
+            Crash
+          </li>
+          <li class='tom' id='tom-pad-7'>
+            Tom
+          </li>
+          <li class='clap' id='clap-pad-7'>
+            Clap
+          </li>
+          <li class='cowbell' id='cowbell-pad-7'>
+            Cowbell
+          </li>
+        </ul>
+        <ul>
+          <li class='bass' id='bass-pad-8'>
+            Bass
+          </li>
+          <li class='snare' id='snare-pad-8'>
+            Snare
+          </li>
+          <li class='closed-hihat' id='closed-hihat-pad-8'>
+            Closed
+            <br />
+            Hi Hat
+          </li>
+          <li class='open-hihat' id='open-hihat-pad-8'>
+            Open
+            <br />
+            Hi Hat
+          </li>
+          <li class='crash' id='crash-pad-8'>
+            Crash
+          </li>
+          <li class='tom' id='tom-pad-8'>
+            Tom
+          </li>
+          <li class='clap' id='clap-pad-8'>
+            Clap
+          </li>
+          <li class='cowbell' id='cowbell-pad-8'>
+            Cowbell
+          </li>
+        </ul>
+        <ul>
+          <li class='bass' id='bass-pad-9'>
+            Bass
+          </li>
+          <li class='snare' id='snare-pad-9'>
+            Snare
+          </li>
+          <li class='closed-hihat' id='closed-hihat-pad-9'>
+            Closed
+            <br />
+            Hi Hat
+          </li>
+          <li class='open-hihat' id='open-hihat-pad-9'>
+            Open
+            <br />
+            Hi Hat
+          </li>
+          <li class='crash' id='crash-pad-9'>
+            Crash
+          </li>
+          <li class='tom' id='tom-pad-9'>
+            Tom
+          </li>
+          <li class='clap' id='clap-pad-9'>
+            Clap
+          </li>
+          <li class='cowbell' id='cowbell-pad-9'>
+            Cowbell
+          </li>
+        </ul>
+        <ul>
+          <li class='bass' id='bass-pad-10'>
+            Bass
+          </li>
+          <li class='snare' id='snare-pad-10'>
+            Snare
+          </li>
+          <li class='closed-hihat' id='closed-hihat-pad-10'>
+            Closed
+            <br />
+            Hi Hat
+          </li>
+          <li class='open-hihat' id='open-hihat-pad-10'>
+            Open
+            <br />
+            Hi Hat
+          </li>
+          <li class='crash' id='crash-pad-10'>
+            Crash
+          </li>
+          <li class='tom' id='tom-pad-10'>
+            Tom
+          </li>
+          <li class='clap' id='clap-pad-10'>
+            Clap
+          </li>
+          <li class='cowbell' id='cowbell-pad-10'>
+            Cowbell
+          </li>
+        </ul>
+        <ul>
+          <li class='bass' id='bass-pad-11'>
+            Bass
+          </li>
+          <li class='snare' id='snare-pad-11'>
+            Snare
+          </li>
+          <li class='closed-hihat' id='closed-hihat-pad-11'>
+            Closed
+            <br />
+            Hi Hat
+          </li>
+          <li class='open-hihat' id='open-hihat-pad-11'>
+            Open
+            <br />
+            Hi Hat
+          </li>
+          <li class='crash' id='crash-pad-11'>
+            Crash
+          </li>
+          <li class='tom' id='tom-pad-11'>
+            Tom
+          </li>
+          <li class='clap' id='clap-pad-11'>
+            Clap
+          </li>
+          <li class='cowbell' id='cowbell-pad-11'>
+            Cowbell
+          </li>
+        </ul>
+        <ul>
+          <li class='bass' id='bass-pad-12'>
+            Bass
+          </li>
+          <li class='snare' id='snare-pad-12'>
+            Snare
+          </li>
+          <li class='closed-hihat' id='closed-hihat-pad-12'>
+            Closed
+            <br />
+            Hi Hat
+          </li>
+          <li class='open-hihat' id='open-hihat-pad-12'>
+            Open
+            <br />
+            Hi Hat
+          </li>
+          <li class='crash' id='crash-pad-12'>
+            Crash
+          </li>
+          <li class='tom' id='tom-pad-12'>
+            Tom
+          </li>
+          <li class='clap' id='clap-pad-12'>
+            Clap
+          </li>
+          <li class='cowbell' id='cowbell-pad-12'>
+            Cowbell
+          </li>
+        </ul>
+        <ul>
+          <li class='bass' id='bass-pad-13'>
+            Bass
+          </li>
+          <li class='snare' id='snare-pad-13'>
+            Snare
+          </li>
+          <li class='closed-hihat' id='closed-hihat-pad-13'>
+            Closed
+            <br />
+            Hi Hat
+          </li>
+          <li class='open-hihat' id='open-hihat-pad-13'>
+            Open
+            <br />
+            Hi Hat
+          </li>
+          <li class='crash' id='crash-pad-13'>
+            Crash
+          </li>
+          <li class='tom' id='tom-pad-13'>
+            Tom
+          </li>
+          <li class='clap' id='clap-pad-13'>
+            Clap
+          </li>
+          <li class='cowbell' id='cowbell-pad-13'>
+            Cowbell
+          </li>
+        </ul>
+        <ul>
+          <li class='bass' id='bass-pad-14'>
+            Bass
+          </li>
+          <li class='snare' id='snare-pad-14'>
+            Snare
+          </li>
+          <li class='closed-hihat' id='closed-hihat-pad-14'>
+            Closed
+            <br />
+            Hi Hat
+          </li>
+          <li class='open-hihat' id='open-hihat-pad-14'>
+            Open
+            <br />
+            Hi Hat
+          </li>
+          <li class='crash' id='crash-pad-14'>
+            Crash
+          </li>
+          <li class='tom' id='tom-pad-14'>
+            Tom
+          </li>
+          <li class='clap' id='clap-pad-14'>
+            Clap
+          </li>
+          <li class='cowbell' id='cowbell-pad-14'>
+            Cowbell
+          </li>
+        </ul>
+        <ul>
+          <li class='bass' id='bass-pad-15'>
+            Bass
+          </li>
+          <li class='snare' id='snare-pad-15'>
+            Snare
+          </li>
+          <li class='closed-hihat' id='closed-hihat-pad-15'>
+            Closed
+            <br />
+            Hi Hat
+          </li>
+          <li class='open-hihat' id='open-hihat-pad-15'>
+            Open
+            <br />
+            Hi Hat
+          </li>
+          <li class='crash' id='crash-pad-15'>
+            Crash
+          </li>
+          <li class='tom' id='tom-pad-15'>
+            Tom
+          </li>
+          <li class='clap' id='clap-pad-15'>
+            Clap
+          </li>
+          <li class='cowbell' id='cowbell-pad-15'>
+            Cowbell
+          </li>
+        </ul>
+        <ul>
+          <li class='bass' id='bass-pad-16'>
+            Bass
+          </li>
+          <li class='snare' id='snare-pad-16'>
+            Snare
+          </li>
+          <li class='closed-hihat' id='closed-hihat-pad-16'>
+            Closed
+            <br />
+            Hi Hat
+          </li>
+          <li class='open-hihat' id='open-hihat-pad-16'>
+            Open
+            <br />
+            Hi Hat
+          </li>
+          <li class='crash' id='crash-pad-16'>
+            Crash
+          </li>
+          <li class='tom' id='tom-pad-16'>
+            Tom
+          </li>
+          <li class='clap' id='clap-pad-16'>
+            Clap
+          </li>
+          <li class='cowbell' id='cowbell-pad-16'>
+            Cowbell
+          </li>
+        </ul>
+      </div>
+      <div id='sounds'>
+        <audio class='bass'>
+          <source src='808/bass.wav' type='audio/wav' />
+          <source src='808/bass.mp3' type='audio/mp3' />
+        </audio>
+        <audio class='snare'>
+          <source src='808/snare.wav' type='audio/wav' />
+          <source src='808/snare.mp3' type='audio/mp3' />
+        </audio>
+        <audio class='closed-hihat'>
+          <source src='808/closed-hihat.wav' type='audio/wav' />
+          <source src='808/closed-hihat.mp3' type='audio/mp3' />
+        </audio>
+        <audio class='open-hihat'>
+          <source src='808/open-hihat.wav' type='audio/wav' />
+          <source src='808/open-hihat.mp3' type='audio/mp3' />
+        </audio>
+        <audio class='crash'>
+          <source src='808/crash.wav' type='audio/wav' />
+          <source src='808/crash.mp3' type='audio/mp3' />
+        </audio>
+        <audio class='tom'>
+          <source src='808/tom.wav' type='audio/wav' />
+          <source src='808/tom.mp3' type='audio/mp3' />
+        </audio>
+        <audio class='clap'>
+          <source src='808/clap.wav' type='audio/wav' />
+          <source src='808/clap.mp3' type='audio/mp3' />
+        </audio>
+        <audio class='cowbell'>
+          <source src='808/cowbell.wav' type='audio/wav' />
+          <source src='808/cowbell.mp3' type='audio/mp3' />
+        </audio>
+      </div>
+    </div>
+    <script src='http://api.relay.io/client/24820E7E-9793-476A-9E58-5145E0DC0DEC.js' type='text/javascript'></script>
+    <script type='text/javascript'>
+      var relay = new RelayClient("24820E7E-9793-476A-9E58-5145E0DC0DEC");
+      relay.getUpdates(function(item) {
+          selectPad(item);
+      });
+    </script>
+  </body>
+</html>
