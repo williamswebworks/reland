@@ -12,6 +12,13 @@ body {
   line-height: 20px;
 }
 
+h1 {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
 /* line 11, (__TEMPLATE__) */
 #wrapper {
   position: relative;

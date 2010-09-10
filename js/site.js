@@ -18,7 +18,7 @@
       .find('li.selected').each(function () {
         var audio = $('#sounds .' + this.className.replace(/\s+.*$/, ''))[0];
         audio.pause();
-        audio.currentTime = 0;
+        audio.currentTime = 0.0;
         audio.play();
         drawCircle();
       }).end()
@@ -46,6 +46,10 @@
 
   function bpm () {
     $('#bpm input').change(function () {
+            
+      if(parseInt(this.value) > 200)
+        this.value = '200';
+        
       interval = 60000 / parseInt(this.value) / 4 ;
     });
   }
@@ -105,6 +109,9 @@
   }
 
   $(document).ready(function(){
+    if( /chrome/.test(navigator.userAgent.toLowerCase()) || !$.browser.safari )
+      $('<h1><marquee>Reland works best in Safari, audio tag playback is still bad in everything else.</marquee></h1>').prependTo('#wrapper');
+      
     slots = $('#board ul');
     padify();
     visualize();
